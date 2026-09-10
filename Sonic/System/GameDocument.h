@@ -21,10 +21,15 @@ namespace Hedgehog::Database
 {
     class CDatabase;
 }
+
 namespace Hedgehog::Mirage
 {
-    class CDebugDraw;
     class CLightFieldManager;
+}
+
+namespace Hedgehog::MirageDebug
+{
+    class CDebugDraw;
 }
 
 namespace Sonic
@@ -50,7 +55,7 @@ namespace Sonic
             boost::shared_ptr<Hedgehog::Database::CDatabase> m_spDatabase;
             hh::list<boost::shared_ptr<CGameObject>> m_GameObjects;
             hh::vector<void*> m_UnkVector01;
-            boost::shared_ptr<Hedgehog::Mirage::CDebugDraw> m_spDebugDraw;
+            boost::shared_ptr<Hedgehog::MirageDebug::CDebugDraw> m_spDebugDraw;
             hh::vector<size_t> m_PlayerIDs;
             BB_INSERT_PADDING(0x20);
             boost::shared_ptr<Hedgehog::Mirage::CLightFieldManager> m_spLightFieldManager;
