@@ -7,8 +7,8 @@ namespace Sonic::Sequence
 	class CSequenceMode : public Hedgehog::Universe::CMessageActor
 	{
 	public:
-		virtual void CSequenceMode10();
-		virtual void ChangeModule();
-		virtual void EndModule();
+		virtual bool Update() { return 0; };
+		virtual void Start() { return; };
+		virtual void End() { return; };
 	};
 }
