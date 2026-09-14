@@ -247,6 +247,7 @@
 #include <Sonic/System/Application.h>
 #include <Sonic/System/ApplicationDocument.h>
 #include <Sonic/System/BGMData.h>
+#include <Sonic/System/StageData.h>
 #include <Sonic/System/GameDocument.h>
 #include <Sonic/System/GameObject.h>
 #include <Sonic/System/GameObject3D.h>

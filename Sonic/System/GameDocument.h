@@ -35,6 +35,7 @@ namespace Hedgehog::MirageDebug
 namespace Sonic
 {
     struct SBGMData;
+    struct SStageData;
     class CGameActParameter;
     class CLightManager;
     class CRenderDirector;
@@ -77,7 +78,8 @@ namespace Sonic
             boost::shared_ptr<CParticleManager> m_spParticleManager;
             CParticleManager* m_pParticleManager; // Odd.
             boost::shared_ptr<CEventManager> m_spEventManager;
-            BB_INSERT_PADDING(0x70);
+            SStageData m_StageData;
+            BB_INSERT_PADDING(0x30);
         };
 
         static constexpr Hedgehog::Base::TSynchronizedPtr<CGameDocument>* ms_pInstance = (Hedgehog::Base::TSynchronizedPtr<CGameDocument>*)0x1E0BE5C;
@@ -118,6 +120,7 @@ namespace Sonic
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_spParticleManager, 0x12C);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_pParticleManager, 0x134);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_spEventManager, 0x138);
+    BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_StageData, 0x140);
     BB_ASSERT_SIZEOF(CGameDocument::CMember, 0x1B0);
 
     BB_ASSERT_OFFSETOF(CGameDocument, m_pCriticalSection, 0x4);
