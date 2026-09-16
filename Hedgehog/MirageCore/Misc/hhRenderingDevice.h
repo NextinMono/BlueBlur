@@ -59,6 +59,8 @@ namespace Hedgehog::Mirage
         void SetViewMatrix(const Math::CMatrix& in_rViewMatrix);
 
         void SetAtlasParameterData(float* const in_pData);
+
+        void GetViewportSize(const int& out_rWidth, const int& out_rHeight);
     };
 
     BB_ASSERT_OFFSETOF(CRenderingDevice, m_pRenderingInfrastructure, 0x0);

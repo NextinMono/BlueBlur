@@ -65,4 +65,12 @@ namespace Hedgehog::Mirage
     {
         fpCRenderingDeviceSetAtlasParameterData(this, in_pData);
     }
+
+    inline BB_FUNCTION_PTR(void, __thiscall, fpCRenderingDeviceGetViewportSize, 0x006F7960, CRenderingDevice* in_pDevice,
+        const int& in_rWidth, const int& in_rHeight);
+
+    inline void CRenderingDevice::GetViewportSize(const int& out_rWidth, const int& out_rHeight)
+    {
+        fpCRenderingDeviceGetViewportSize(this, out_rWidth, out_rHeight);
+    }
 }
