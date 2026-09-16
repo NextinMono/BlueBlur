@@ -5,6 +5,7 @@
 
 // boost
 #include <boost/any.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/function.hpp>
 #include <boost/make_shared.hpp>
 #include <boost/scoped_ptr.hpp>
