@@ -58,7 +58,9 @@ namespace Sonic
             hh::vector<void*> m_UnkVector01;
             boost::shared_ptr<Hedgehog::MirageDebug::CDebugDraw> m_spDebugDraw;
             hh::vector<size_t> m_PlayerIDs;
-            BB_INSERT_PADDING(0x20);
+            BB_INSERT_PADDING(0x8);
+            int m_TerrainManager2ndActorID;
+            BB_INSERT_PADDING(0x14);
             boost::shared_ptr<Hedgehog::Mirage::CLightFieldManager> m_spLightFieldManager;
             boost::shared_ptr<CLightManager> m_spLightManager;
             Hedgehog::Base::CSharedString m_StageName;
@@ -68,7 +70,9 @@ namespace Sonic
             Hedgehog::Base::CSharedString m_Name01;
             BB_INSERT_PADDING(0x24);
             bool m_FieldD0;
-            BB_INSERT_PADDING(0x23);
+            BB_INSERT_PADDING(0x14);
+            Hedgehog::Base::CSharedString m_BGMName;
+            BB_INSERT_PADDING(0x8);
             CParameterBank* m_pParamaterBank;
             BB_INSERT_PADDING(0x14);
             int m_StageManagerActorID;
@@ -108,12 +112,14 @@ namespace Sonic
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_spDatabase, 0x1C);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_GameObjects, 0x24);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_PlayerIDs, 0x48);
+    BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_TerrainManager2ndActorID, 0x60);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_spLightManager, 0x80);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_StageName, 0x88);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_AudioData, 0x8C);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_Field9C, 0x9C);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_Name01, 0xA8);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_FieldD0, 0xD0);
+    BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_BGMName, 0xE8);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_pParamaterBank, 0xF4);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_StageManagerActorID, 0x10C);
     BB_ASSERT_OFFSETOF(CGameDocument::CMember, m_spNextStagePreloadingManager, 0x120);
