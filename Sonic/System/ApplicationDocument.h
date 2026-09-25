@@ -61,6 +61,7 @@ namespace Sonic
     class CGameplayFlowManager;
     class CPlayerProperty;
     class CGammaController;
+    class IUpdateCoordinator;
 
     enum ELanguage : uint8_t
     {
@@ -111,11 +112,9 @@ namespace Sonic
             boost::shared_ptr<Hedgehog::Database::CDatabase> m_spCaptionDatabase;
             boost::shared_ptr<Hedgehog::Database::CDatabase> m_FieldC0;
             boost::shared_ptr<Hedgehog::Database::CDatabaseLoader> m_spDatabaseLoader;
-            float m_UpdateCategoryDeltaTime;
-            BB_INSERT_PADDING(0x4);
-            Hedgehog::Base::CSharedString m_CurrentUpdateCategory;
-            BB_INSERT_PADDING(0x6);
-            size_t* m_FieldE4;
+            Hedgehog::Universe::SUpdateInfo m_UpdateInfo;
+            boost::shared_ptr<IUpdateCoordinator> m_spUpdateCoordinator;
+            size_t m_RandomSeed;
             boost::shared_ptr<Hedgehog::Mirage::CMatrixNode> m_spMatrixNodeRoot;
             BB_INSERT_PADDING(0x10);
             CGammaController m_GammaController;
@@ -191,6 +190,9 @@ namespace Sonic
     BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_spCaptionDatabase, 0xB8);
     BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_FieldC0, 0xC0);
     BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_spDatabaseLoader, 0xC8);
+    BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_UpdateInfo, 0xD0);
+    BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_spUpdateCoordinator, 0xDC);
+    BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_RandomSeed, 0xE4);
     BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_spMatrixNodeRoot, 0xE8);
     BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_GammaController, 0x100);
     BB_ASSERT_OFFSETOF(CApplicationDocument::CMember, m_Field140, 0x140);
