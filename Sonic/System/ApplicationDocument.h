@@ -227,6 +227,7 @@ namespace Sonic
 
     BB_ASSERT_OFFSETOF(CApplicationDocument, m_pMember, 0x4);
     BB_ASSERT_OFFSETOF(CApplicationDocument, m_UILanguage, 0x8);
+    BB_ASSERT_OFFSETOF(CApplicationDocument, m_Region, 0xC);
     BB_ASSERT_OFFSETOF(CApplicationDocument, m_ServiceMap, 0x34);
     BB_ASSERT_SIZEOF(CApplicationDocument, 0x40);
 }
