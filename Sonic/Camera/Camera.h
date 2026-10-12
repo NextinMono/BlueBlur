@@ -27,7 +27,7 @@ namespace Sonic
         Hedgehog::Math::CVector m_UpVector;
         BB_INSERT_PADDING(0x1DC);
         uint32_t m_ActorID;
-        Hedgehog::Base::CSharedString m_WorldName;
+        Hedgehog::Base::CSharedString m_Name;
         BB_INSERT_PADDING(0x04);
         float m_FieldOfView;
         float m_FieldOfViewTarget;
@@ -42,7 +42,7 @@ namespace Sonic
     BB_ASSERT_OFFSETOF(CCamera, m_TargetPosition,   0x230);
     BB_ASSERT_OFFSETOF(CCamera, m_UpVector,         0x240);
     BB_ASSERT_OFFSETOF(CCamera, m_ActorID,          0x42C);
-    BB_ASSERT_OFFSETOF(CCamera, m_WorldName,        0x430);
+    BB_ASSERT_OFFSETOF(CCamera, m_Name,             0x430);
     BB_ASSERT_OFFSETOF(CCamera, m_FieldOfView,      0x438);
     BB_ASSERT_OFFSETOF(CCamera, m_spSoundListener,  0x468);
     BB_ASSERT_SIZEOF(CCamera, 0x490);
